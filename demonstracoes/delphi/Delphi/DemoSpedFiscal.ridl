@@ -1,0 +1,7 @@
+[
+  uuid(44883BDD-B15E-4F12-AA90-DFA952417554),
+  version(1.0)
+]
+library DemoSpedFiscal
+{
+};

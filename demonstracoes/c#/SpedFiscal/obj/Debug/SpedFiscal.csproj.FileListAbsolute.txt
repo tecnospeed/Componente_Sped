@@ -1,0 +1,23 @@
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\bin\Debug\SpedFiscal.exe.config
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\bin\Debug\SpedFiscal.exe
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\bin\Debug\SpedFiscal.pdb
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.csprojResolveAssemblyReference.cache
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.Sped.resources
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.Properties.Resources.resources
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.csproj.GenerateResource.cache
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.csproj.CoreCompileInputs.cache
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.exe
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.pdb
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\Interop.SpedClientX.dll
+C:\DiscoE\ex comp\Componente Sped\C#\SpedFiscal\SpedFiscal\obj\Debug\SpedFiscal.csproj.ResolveComReference.cache
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\bin\Debug\SpedFiscal.exe.config
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\Interop.SpedClientX.dll
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.csproj.ResolveComReference.cache
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.exe
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.pdb
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\bin\Debug\SpedFiscal.exe
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\bin\Debug\SpedFiscal.pdb
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.csprojResolveAssemblyReference.cache
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.Sped.resources
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.Properties.Resources.resources
+C:\Git\Sped\demonstracoes\c#\SpedFiscal\obj\Debug\SpedFiscal.csproj.GenerateResource.Cache
