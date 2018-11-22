@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 549
+  Top = 231
   Caption = 'Form1'
-  ClientHeight = 691
+  ClientHeight = 723
   ClientWidth = 591
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -29,8 +30,8 @@ object Form1: TForm1
     Caption = 'Data Final:'
   end
   object btnIniciarApuracao: TButton
-    Left = 4
-    Top = 207
+    Left = 3
+    Top = 244
     Width = 583
     Height = 25
     Align = alCustom
@@ -39,16 +40,16 @@ object Form1: TForm1
     OnClick = btnIniciarApuracaoClick
   end
   object Memo1: TMemo
-    Left = 4
-    Top = 328
+    Left = 3
+    Top = 365
     Width = 583
     Height = 355
     Align = alCustom
     TabOrder = 1
   end
   object edtProtocolo: TLabeledEdit
-    Left = 4
-    Top = 251
+    Left = 3
+    Top = 288
     Width = 583
     Height = 21
     EditLabel.Width = 49
@@ -57,8 +58,8 @@ object Form1: TForm1
     TabOrder = 2
   end
   object btnEnviar: TButton
-    Left = 158
-    Top = 282
+    Left = 157
+    Top = 319
     Width = 121
     Height = 40
     Caption = 'Enviar Registro'
@@ -66,8 +67,8 @@ object Form1: TForm1
     OnClick = btnEnviarClick
   end
   object btnGerarApur: TButton
-    Left = 307
-    Top = 282
+    Left = 306
+    Top = 319
     Width = 121
     Height = 40
     Caption = 'Gerar Apura'#231#227'o'
@@ -75,8 +76,8 @@ object Form1: TForm1
     OnClick = btnGerarApurClick
   end
   object btnConsultarApur: TButton
-    Left = 462
-    Top = 282
+    Left = 461
+    Top = 319
     Width = 125
     Height = 40
     Caption = 'Consultar Apura'#231#227'o'
@@ -84,8 +85,8 @@ object Form1: TForm1
     OnClick = btnConsultarApurClick
   end
   object btnGerarTx2: TButton
-    Left = 4
-    Top = 282
+    Left = 3
+    Top = 319
     Width = 121
     Height = 40
     Caption = 'Gerar Tx2'
@@ -169,5 +170,15 @@ object Form1: TForm1
     Date = 43312.496116851850000000
     Time = 43312.496116851850000000
     TabOrder = 14
+  end
+  object btnConfigurar: TButton
+    Left = 3
+    Top = 211
+    Width = 583
+    Height = 25
+    Align = alCustom
+    Caption = 'CONFIGURAR'
+    TabOrder = 15
+    OnClick = btnConfigurarClick
   end
 end
