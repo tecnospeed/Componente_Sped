@@ -52,18 +52,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtFim = new System.Windows.Forms.DateTimePicker();
+            this.btnConfigurar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // edtProtocolo
             // 
-            this.edtProtocolo.Location = new System.Drawing.Point(12, 247);
+            this.edtProtocolo.Location = new System.Drawing.Point(12, 282);
             this.edtProtocolo.Name = "edtProtocolo";
             this.edtProtocolo.Size = new System.Drawing.Size(554, 20);
             this.edtProtocolo.TabIndex = 0;
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(12, 200);
+            this.btnIniciar.Location = new System.Drawing.Point(12, 235);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(554, 28);
             this.btnIniciar.TabIndex = 1;
@@ -73,7 +74,7 @@
             // 
             // btnGerar
             // 
-            this.btnGerar.Location = new System.Drawing.Point(12, 273);
+            this.btnGerar.Location = new System.Drawing.Point(12, 308);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(135, 28);
             this.btnGerar.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(153, 273);
+            this.btnEnviar.Location = new System.Drawing.Point(153, 308);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(131, 28);
             this.btnEnviar.TabIndex = 3;
@@ -93,7 +94,7 @@
             // 
             // btnGerarApur
             // 
-            this.btnGerarApur.Location = new System.Drawing.Point(290, 273);
+            this.btnGerarApur.Location = new System.Drawing.Point(290, 308);
             this.btnGerarApur.Name = "btnGerarApur";
             this.btnGerarApur.Size = new System.Drawing.Size(135, 28);
             this.btnGerarApur.TabIndex = 4;
@@ -103,7 +104,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(431, 273);
+            this.btnConsultar.Location = new System.Drawing.Point(431, 308);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(135, 28);
             this.btnConsultar.TabIndex = 5;
@@ -113,7 +114,7 @@
             // 
             // mmRetorno
             // 
-            this.mmRetorno.Location = new System.Drawing.Point(12, 307);
+            this.mmRetorno.Location = new System.Drawing.Point(12, 342);
             this.mmRetorno.Multiline = true;
             this.mmRetorno.Name = "mmRetorno";
             this.mmRetorno.Size = new System.Drawing.Size(554, 328);
@@ -122,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 231);
+            this.label1.Location = new System.Drawing.Point(12, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 7;
@@ -258,11 +259,22 @@
             this.dtFim.TabIndex = 22;
             this.dtFim.Value = new System.DateTime(2018, 7, 31, 0, 0, 0, 0);
             // 
+            // btnConfigurar
+            // 
+            this.btnConfigurar.Location = new System.Drawing.Point(12, 200);
+            this.btnConfigurar.Name = "btnConfigurar";
+            this.btnConfigurar.Size = new System.Drawing.Size(554, 28);
+            this.btnConfigurar.TabIndex = 24;
+            this.btnConfigurar.Text = "CONFIGURAR";
+            this.btnConfigurar.UseVisualStyleBackColor = true;
+            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
+            // 
             // Sped
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 647);
+            this.ClientSize = new System.Drawing.Size(578, 682);
+            this.Controls.Add(this.btnConfigurar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtFim);
             this.Controls.Add(this.label8);
@@ -321,6 +333,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtFim;
+        private System.Windows.Forms.Button btnConfigurar;
     }
 }
 

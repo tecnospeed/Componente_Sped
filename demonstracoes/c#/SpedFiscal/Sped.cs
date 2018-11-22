@@ -22,14 +22,6 @@ namespace SpedFiscal
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             SpedClientX.IspdRetIniciarApuracao _RetApuracao;
-            spedFiscal.NomeArquivo = txtNomeArquivo.Text + ".txt";
-            spedFiscal.DataInicio = dtInicio.Value.ToString("dd/MM/yyyy");
-            spedFiscal.DataFim = dtFim.Value.ToString("dd/MM/yyyy");
-            spedFiscal.CnpjEmissor = txtEmissor.Text;
-            spedFiscal.DiretorioArquivo = txtArquivo.Text;
-            spedFiscal.DiretorioErros = @"C:\Program Files\TecnoSpeed\SpedFiscal\Arquivos\";
-            spedFiscal.DiretorioConfiguracao = txtConfig.Text;
-            spedFiscal.ConfigurarSoftwareHouse(txtCnpjSH.Text, txtTokenSH.Text);
             _RetApuracao = spedFiscal.IniciarApuracao();
             mmRetorno.Clear();
             mmRetorno.Text += " Retorno do Inicia Apuração" + Environment.NewLine;
@@ -100,6 +92,18 @@ namespace SpedFiscal
             mmRetorno.Text += "   Mensagem: " + _RetConsultarApuracao.Mensagem + Environment.NewLine;
             mmRetorno.Text += "   Nome do arquivo: " + _RetConsultarApuracao.NomeArquivo + Environment.NewLine;
             mmRetorno.Text += "   Código: " + _RetConsultarApuracao.Codigo + Environment.NewLine;
+        }
+
+        private void btnConfigurar_Click(object sender, EventArgs e)
+        {
+            spedFiscal.NomeArquivo = txtNomeArquivo.Text + ".txt";
+            spedFiscal.DataInicio = dtInicio.Value.ToString("dd/MM/yyyy");
+            spedFiscal.DataFim = dtFim.Value.ToString("dd/MM/yyyy");
+            spedFiscal.CnpjEmissor = txtEmissor.Text;
+            spedFiscal.DiretorioArquivo = txtArquivo.Text;
+            spedFiscal.DiretorioErros = @"C:\Program Files\TecnoSpeed\SpedFiscal\Arquivos\";
+            spedFiscal.DiretorioConfiguracao = txtConfig.Text;
+            spedFiscal.ConfigurarSoftwareHouse(txtCnpjSH.Text, txtTokenSH.Text);
         }
     }
 }

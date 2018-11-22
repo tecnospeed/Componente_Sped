@@ -25,12 +25,14 @@ type
     edtNomeArquivo: TLabeledEdit;
     dtInicio: TDateTimePicker;
     dtFim: TDateTimePicker;
+    btnConfigurar: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnIniciarApuracaoClick(Sender: TObject);
     procedure btnGerarTx2Click(Sender: TObject);
     procedure btnEnviarClick(Sender: TObject);
     procedure btnGerarApurClick(Sender: TObject);
     procedure btnConsultarApurClick(Sender: TObject);
+    procedure btnConfigurarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,13 +65,6 @@ var
   _Apuracao: IspdApuracao;
   _RetApuracao: IspdRetIniciarApuracao;
 begin
-  SpedFiscal.ConfigurarSoftwareHouse(edtCnpjSH.Text, edtTokenSH.Text);
-  SpedFiscal.NomeArquivo := edtNomeArquivo.Text + '.txt';
-  SpedFiscal.DataInicio := DateToStr(dtInicio.Date);
-  SpedFiscal.DataFim := DateToStr(dtFim.Date);
-  SpedFiscal.CnpjEmissor := edtCnpjEmissor.Text;
-  SpedFiscal.DiretorioArquivo := edtArquivo.Text;
-  SpedFiscal.DiretorioConfiguracao := edtConfig.Text;
   _RetApuracao := SpedFiscal.IniciarApuracao();
   edtProtocolo.Text := _RetApuracao.Protocolo;
   Memo1.Lines.Clear;
@@ -133,6 +128,17 @@ begin
   Memo1.Lines.Add('   Mensagem: ' + _RetConsultarApuracao.Mensagem);
   Memo1.Lines.Add('   Nome do Arquivo: ' + _RetConsultarApuracao.NomeArquivo);
   Memo1.Lines.Add('   Código: ' + _RetConsultarApuracao.Codigo);
+end;
+
+procedure TForm1.btnConfigurarClick(Sender: TObject);
+begin
+  SpedFiscal.ConfigurarSoftwareHouse(edtCnpjSH.Text, edtTokenSH.Text);
+  SpedFiscal.NomeArquivo := edtNomeArquivo.Text + '.txt';
+  SpedFiscal.DataInicio := DateToStr(dtInicio.Date);
+  SpedFiscal.DataFim := DateToStr(dtFim.Date);
+  SpedFiscal.CnpjEmissor := edtCnpjEmissor.Text;
+  SpedFiscal.DiretorioArquivo := edtArquivo.Text;
+  SpedFiscal.DiretorioConfiguracao := edtConfig.Text;
 end;
 
 end.

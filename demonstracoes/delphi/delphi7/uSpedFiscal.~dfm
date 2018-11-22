@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 229
-  Top = 136
+  Left = 493
+  Top = 116
   Width = 603
-  Height = 724
+  Height = 767
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -30,7 +30,7 @@ object Form1: TForm1
   end
   object btnIniciarApuracao: TButton
     Left = 4
-    Top = 207
+    Top = 245
     Width = 583
     Height = 25
     Caption = 'INICIAR APURACAO'
@@ -39,7 +39,7 @@ object Form1: TForm1
   end
   object Memo1: TMemo
     Left = 4
-    Top = 333
+    Top = 371
     Width = 583
     Height = 355
     Align = alCustom
@@ -47,7 +47,7 @@ object Form1: TForm1
   end
   object edtProtocolo: TLabeledEdit
     Left = 4
-    Top = 251
+    Top = 289
     Width = 583
     Height = 21
     EditLabel.Width = 48
@@ -57,7 +57,7 @@ object Form1: TForm1
   end
   object btnEnviar: TButton
     Left = 158
-    Top = 282
+    Top = 320
     Width = 121
     Height = 40
     Caption = 'Enviar Registro'
@@ -66,7 +66,7 @@ object Form1: TForm1
   end
   object btnGerarApur: TButton
     Left = 307
-    Top = 282
+    Top = 320
     Width = 121
     Height = 40
     Caption = 'Gerar Apura'#231#227'o'
@@ -75,7 +75,7 @@ object Form1: TForm1
   end
   object btnConsultarApur: TButton
     Left = 462
-    Top = 282
+    Top = 320
     Width = 125
     Height = 40
     Caption = 'Consultar Apura'#231#227'o'
@@ -84,7 +84,7 @@ object Form1: TForm1
   end
   object btnGerarTx2: TButton
     Left = 4
-    Top = 282
+    Top = 320
     Width = 121
     Height = 40
     Caption = 'Gerar Tx2'
@@ -168,5 +168,14 @@ object Form1: TForm1
     Date = 43312.496116851850000000
     Time = 43312.496116851850000000
     TabOrder = 14
+  end
+  object btnConfigurar: TButton
+    Left = 4
+    Top = 211
+    Width = 583
+    Height = 25
+    Caption = 'CONFIGURAR'
+    TabOrder = 15
+    OnClick = btnConfigurarClick
   end
 end
