@@ -40,7 +40,7 @@ object Form1: TForm1
     OnClick = btnIniciarApuracaoClick
   end
   object Memo1: TMemo
-    Left = 3
+    Left = 0
     Top = 365
     Width = 583
     Height = 355
