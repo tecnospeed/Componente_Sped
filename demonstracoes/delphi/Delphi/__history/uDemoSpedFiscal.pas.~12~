@@ -117,10 +117,10 @@ procedure TForm1.btnGerarTx2Click(Sender: TObject);
 begin
   Memo1.Lines.Clear;
   Memo1.Lines.Add('INCLUIR0000');
-  Memo1.Lines.Add('COD_VER_1=013');
+  Memo1.Lines.Add('COD_VER_1=012');
   Memo1.Lines.Add('COD_FIN_2=0');
-  Memo1.Lines.Add('DT_INI_3=01012019');
-  Memo1.Lines.Add('DT_FIN_4=31012019');
+  Memo1.Lines.Add('DT_INI_3=01112018');
+  Memo1.Lines.Add('DT_FIN_4=30112018');
   Memo1.Lines.Add('NOME_5=TECNOSPEED SA');
   Memo1.Lines.Add('CNPJ_6=0000000');
   Memo1.Lines.Add('CPF_7=');
