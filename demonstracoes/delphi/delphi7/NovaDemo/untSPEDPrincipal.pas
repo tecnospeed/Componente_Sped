@@ -137,7 +137,6 @@ end;
 procedure TfrmSpedPrincipal.sbPreencherCompClick(Sender: TObject);
 begin
   vPreenchido := False;
-  
   try
     vSpedFiscal.ConfigurarSoftwareHouse(edtCNPJ.Text, edtTOKEN.Text); //PRIMEIRO PASSO DO COMPONENTE
     vSpedFiscal.NomeArquivo           := edtNomeArquivo.Text + '.txt';
