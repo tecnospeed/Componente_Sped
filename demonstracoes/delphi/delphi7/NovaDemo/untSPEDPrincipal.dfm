@@ -354,7 +354,6 @@ object frmSpedPrincipal: TfrmSpedPrincipal
             Width = 489
             Height = 76
             Align = alClient
-            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -374,7 +373,6 @@ object frmSpedPrincipal: TfrmSpedPrincipal
             Width = 489
             Height = 76
             Align = alClient
-            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -394,7 +392,6 @@ object frmSpedPrincipal: TfrmSpedPrincipal
             Width = 489
             Height = 77
             Align = alClient
-            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -426,7 +423,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         object GroupBox6: TGroupBox
           Left = 0
           Top = 0
-          Width = 427
+          Width = 493
           Height = 279
           Align = alClient
           Caption = 'Retorno do Envio'
@@ -434,10 +431,9 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           object mmRetornoEnvio: TMemo
             Left = 2
             Top = 15
-            Width = 423
+            Width = 489
             Height = 262
             Align = alClient
-            ReadOnly = True
             TabOrder = 0
           end
         end

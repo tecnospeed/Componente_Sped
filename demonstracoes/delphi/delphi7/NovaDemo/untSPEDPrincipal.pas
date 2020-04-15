@@ -74,10 +74,6 @@ type
     { Public declarations }
     vSpedFiscal : TspdSpedClientX;
     vArquivoIni : TIniFile;
-    vPreenchido : Boolean;
-    vApurado    : Boolean;
-    vTX2OK      : Boolean;
-    vEnviado    : Boolean;
   end;
 
 var
@@ -112,10 +108,6 @@ end;
 
 procedure TfrmSpedPrincipal.Limpar;
 begin
-    vPreenchido := False;
-    vApurado    := False;
-    vTX2OK      := False;
-    vEnviado    := False;
 end;
 
 procedure TfrmSpedPrincipal.FormCreate(Sender: TObject);
@@ -136,7 +128,6 @@ end;
 
 procedure TfrmSpedPrincipal.sbPreencherCompClick(Sender: TObject);
 begin
-  vPreenchido := False;
   try
     vSpedFiscal.ConfigurarSoftwareHouse(edtCNPJ.Text, edtTOKEN.Text); //PRIMEIRO PASSO DO COMPONENTE
     vSpedFiscal.NomeArquivo           := edtNomeArquivo.Text + '.txt';
@@ -148,7 +139,6 @@ begin
 
     ShowMessage('Configurado com sucesso.');
 
-    vPreenchido := True;
   except
     on e : exception do
      showmessage('Ocorreu o seguinte erro: '+ e.message);
@@ -160,14 +150,7 @@ var
   vApuracao: IspdApuracao;
   vRetApuracao: IspdRetIniciarApuracao;
 begin
-  vApurado := False;
   try
-    if not vPreenchido then
-    begin
-      ShowMessage('Favor preencher componente primeiro.');
-      Exit;
-    end;
-
     vRetApuracao := vSpedFiscal.IniciarApuracao();
 
     edtProtocolo.Text := vRetApuracao.Protocolo;
@@ -175,9 +158,8 @@ begin
     mmApuracao.Lines.Clear;
     mmApuracao.Lines.Add('   Protocolo: ' + vRetApuracao.Protocolo);
     mmApuracao.Lines.Add('   Mensagem: ' + vRetApuracao.Mensagem);
-    
+
     ShowMessage('Apurado com sucesso.');
-    vApurado := True;
     pcProcessos.ActivePage := tsApuracao;
   except
     on e : exception do
@@ -208,7 +190,6 @@ begin
 
     pcProcessos.ActivePage := tsTX2;
   finally
-    vTX2OK := True;
   end;
 end;
 
@@ -217,23 +198,6 @@ var
   vRetEnvioRegistro: IspdRetEnviarRegistros;
 begin
   try
-    if vEnviado then
-    begin
-      ShowMessage('TX2 já enviado.');
-      Exit;
-    end;
-
-    if not vApurado then
-    begin
-      ShowMessage('Favor iniciar apuração para o envio.');
-      Exit;
-    end;
-
-    if not vTX2OK then
-    begin
-      ShowMessage('Favor gerar o TX2 para envio.');
-      Exit;
-    end;
 
     vRetEnvioRegistro := vSpedFiscal.EnviarRegistros(edtProtocolo.Text, mmTX2.Text);
 
@@ -242,7 +206,6 @@ begin
     mmRetornoEnvio.Lines.Add('   Mensagem: ' + vRetEnvioRegistro.Mensagem);
 
     ShowMessage('Enviado com sucesso.');
-    vEnviado := True;
     pcProcessos.ActivePage := tsRetornoEnvio;
   except
     on e : exception do
@@ -255,11 +218,6 @@ var
   vRetGerarApuracao: IspdRetGerarApuracao;
 begin
   try
-    if not vEnviado then
-    begin
-      ShowMessage('Favor fazer o envio.');
-      Exit;
-    end;
 
     vRetGerarApuracao := vSpedFiscal.GerarApuracao(edtProtocolo.Text);
     mmGerarApuracao.Lines.Clear;
@@ -279,11 +237,6 @@ var
   vRetConsultarApuracao: IspdRetConsultarApuracao;
 begin
   try
-    if not vEnviado then
-    begin
-      ShowMessage('Favor fazer o envio.');
-      Exit;
-    end;
 
     vRetConsultarApuracao := vSpedFiscal.ConsultarApuracao(edtProtocolo.Text, vSpedFiscal.DiretorioArquivo);
     mmConsultaApuracao.Lines.Clear;
