@@ -97,9 +97,9 @@ implementation
 
 procedure TfrmSpedPrincipal.CarregarIniSPED;
 begin
-  edtCNPJ.Text         := vArquivoIni.ReadString('PRINCIPAL','CNPJSH','');
-  edtTOKEN.Text        := vArquivoIni.ReadString('PRINCIPAL','TOKENSH','');
-  edtCNPJEmissor.Text  := vArquivoIni.ReadString('PRINCIPAL','CNPJEMISSOR','');
+  edtCNPJ.Text         := vArquivoIni.ReadString('SPED','CNPJSH','');
+  edtTOKEN.Text        := vArquivoIni.ReadString('SPED','TOKENSH','');
+  edtCNPJEmissor.Text  := vArquivoIni.ReadString('SPED','CNPJEMISSOR','');
 
   edtDirArquivo.Text      := vArquivoIni.ReadString('DIRETORIOS','ARQUIVO','');
   edtDirConfiguracao.Text := vArquivoIni.ReadString('DIRETORIOS','CONFIGURACAO','');
