@@ -1,11 +1,11 @@
 object frmSpedPrincipal: TfrmSpedPrincipal
-  Left = 342
-  Top = 198
+  Left = 484
+  Top = 146
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Demonstra'#231#227'o SPED'
-  ClientHeight = 414
-  ClientWidth = 804
+  ClientHeight = 821
+  ClientWidth = 1023
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
@@ -21,58 +21,65 @@ object frmSpedPrincipal: TfrmSpedPrincipal
   object Panel2: TPanel
     Left = 0
     Top = 50
-    Width = 801
-    Height = 364
+    Width = 1025
+    Height = 771
     Align = alLeft
     TabOrder = 0
     object GroupBox2: TGroupBox
       Left = 1
       Top = 1
-      Width = 799
-      Height = 132
+      Width = 1023
+      Height = 176
       Align = alTop
       TabOrder = 0
       object Label4: TLabel
         Left = 11
         Top = 9
-        Width = 83
+        Width = 173
         Height = 13
-        Caption = 'Diret'#243'rio Arquivos'
+        Caption = 'Diret'#243'rio Configura'#231#245'es (Arquivos.ini)'
       end
       object Label8: TLabel
         Left = 11
-        Top = 49
+        Top = 89
         Width = 53
         Height = 13
         Caption = 'Data Inicial'
       end
       object Label9: TLabel
         Left = 123
-        Top = 49
+        Top = 89
         Width = 48
         Height = 13
         Caption = 'Data Final'
       end
       object Label7: TLabel
-        Left = 309
+        Left = 472
         Top = 48
-        Width = 82
+        Width = 138
         Height = 13
-        Caption = 'Nome do Arquivo'
+        Caption = 'Nome do Arquivo de Retorno'
       end
       object Label1: TLabel
         Left = 11
-        Top = 89
+        Top = 129
         Width = 103
         Height = 13
         Caption = 'CNPJ SoftwareHouse'
       end
       object Label2: TLabel
         Left = 200
-        Top = 89
+        Top = 129
         Width = 31
         Height = 13
         Caption = 'Token'
+      end
+      object Label5: TLabel
+        Left = 8
+        Top = 48
+        Width = 129
+        Height = 13
+        Caption = 'Diret'#243'rio Arquivo de retorno'
       end
       object edtDirArquivo: TEdit
         Left = 9
@@ -84,7 +91,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
       end
       object edtDataIni: TDateTimePicker
         Left = 9
-        Top = 64
+        Top = 104
         Width = 105
         Height = 21
         Date = 43913.500044479170000000
@@ -93,7 +100,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
       end
       object edtDataFim: TDateTimePicker
         Left = 122
-        Top = 63
+        Top = 103
         Width = 105
         Height = 21
         Date = 43913.500044479170000000
@@ -101,16 +108,16 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         TabOrder = 2
       end
       object edtNomeArquivo: TEdit
-        Left = 305
+        Left = 472
         Top = 63
-        Width = 121
+        Width = 177
         Height = 21
         TabOrder = 3
         Text = 'MeuSPED'
       end
       object edtCNPJ: TEdit
         Left = 9
-        Top = 103
+        Top = 143
         Width = 185
         Height = 21
         TabOrder = 4
@@ -118,17 +125,17 @@ object frmSpedPrincipal: TfrmSpedPrincipal
       end
       object edtToken: TEdit
         Left = 200
-        Top = 103
-        Width = 227
+        Top = 143
+        Width = 449
         Height = 21
         TabOrder = 5
-        Text = 'aaaaaaaaaaaaaa'
+        Text = 'a684sdf31fa35w1gfg5dsd3f1gsd1f3ds5f1g6sd1fga3sdf1'
       end
       object Panel3: TPanel
-        Left = 436
+        Left = 660
         Top = 15
         Width = 361
-        Height = 115
+        Height = 159
         Align = alRight
         BevelOuter = bvLowered
         TabOrder = 6
@@ -147,8 +154,8 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           OnClick = sbPreencherCompClick
         end
         object sbIniciarApuracao: TSpeedButton
-          Left = 14
-          Top = 42
+          Left = 190
+          Top = 10
           Width = 164
           Height = 31
           Caption = '2 - Iniciar Apura'#231#227'o'
@@ -162,7 +169,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         end
         object sbGerarTX2: TSpeedButton
           Left = 14
-          Top = 75
+          Top = 59
           Width = 164
           Height = 31
           Caption = '3 - Gerar TX2'
@@ -175,8 +182,8 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           OnClick = sbGerarTX2Click
         end
         object sbEnviar: TSpeedButton
-          Left = 187
-          Top = 9
+          Left = 190
+          Top = 59
           Width = 164
           Height = 31
           Caption = '4 - Enviar'
@@ -189,8 +196,8 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           OnClick = sbEnviarClick
         end
         object sbGerarApuracao: TSpeedButton
-          Left = 187
-          Top = 42
+          Left = 14
+          Top = 114
           Width = 164
           Height = 31
           Caption = '5 - Gerar Apura'#231#227'o'
@@ -203,8 +210,8 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           OnClick = sbGerarApuracaoClick
         end
         object sbConsultarApuracao: TSpeedButton
-          Left = 187
-          Top = 75
+          Left = 190
+          Top = 114
           Width = 164
           Height = 31
           Caption = '6 - Consultar Apura'#231#227'o'
@@ -217,13 +224,39 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           OnClick = sbConsultarApuracaoClick
         end
       end
+      object edtDirRetorno: TEdit
+        Left = 8
+        Top = 64
+        Width = 417
+        Height = 21
+        TabOrder = 7
+        Text = 'Retorno\'
+      end
+      object btnDirConfig: TButton
+        Left = 432
+        Top = 24
+        Width = 21
+        Height = 21
+        Caption = '...'
+        TabOrder = 8
+        OnClick = btnDirConfigClick
+      end
+      object btnDirRetorno: TButton
+        Left = 432
+        Top = 63
+        Width = 21
+        Height = 21
+        Caption = '...'
+        TabOrder = 9
+        OnClick = btnDirRetornoClick
+      end
     end
     object pcProcessos: TPageControl
       Left = 1
-      Top = 133
-      Width = 799
-      Height = 230
-      ActivePage = tsRetornoEnvio
+      Top = 177
+      Width = 1023
+      Height = 593
+      ActivePage = tsApuracao
       Align = alClient
       TabOrder = 1
       object tsApuracao: TTabSheet
@@ -231,8 +264,8 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         object gbRetornoApuracao: TGroupBox
           Left = 0
           Top = 0
-          Width = 791
-          Height = 93
+          Width = 1015
+          Height = 169
           Align = alTop
           Caption = 'Retorno do Inicio Apura'#231#227'o'
           Color = clBtnFace
@@ -241,17 +274,18 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           object mmApuracao: TMemo
             Left = 2
             Top = 15
-            Width = 787
-            Height = 76
+            Width = 1011
+            Height = 152
             Align = alClient
+            ScrollBars = ssVertical
             TabOrder = 0
           end
         end
         object GroupBox7: TGroupBox
           Left = 0
-          Top = 93
-          Width = 791
-          Height = 93
+          Top = 169
+          Width = 1015
+          Height = 176
           Align = alTop
           Caption = 'Retorno da Gera'#231#227'o da Apura'#231#227'o'
           Color = clBtnFace
@@ -260,17 +294,18 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           object mmGerarApuracao: TMemo
             Left = 2
             Top = 15
-            Width = 787
-            Height = 76
+            Width = 1011
+            Height = 159
             Align = alClient
+            ScrollBars = ssVertical
             TabOrder = 0
           end
         end
         object GroupBox8: TGroupBox
           Left = 0
-          Top = 186
-          Width = 791
-          Height = 94
+          Top = 345
+          Width = 1015
+          Height = 183
           Align = alTop
           Caption = 'Retorno da Consulta da Apura'#231#227'o'
           Color = clBtnFace
@@ -279,11 +314,27 @@ object frmSpedPrincipal: TfrmSpedPrincipal
           object mmConsultaApuracao: TMemo
             Left = 2
             Top = 15
-            Width = 787
-            Height = 77
+            Width = 1011
+            Height = 166
             Align = alClient
+            ScrollBars = ssVertical
             TabOrder = 0
           end
+        end
+        object Button1: TButton
+          Left = 880
+          Top = 536
+          Width = 129
+          Height = 25
+          Caption = 'Limpar Retornos'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 3
+          OnClick = Button1Click
         end
       end
       object tsTX2: TTabSheet
@@ -292,17 +343,18 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         object GroupBox5: TGroupBox
           Left = 0
           Top = 0
-          Width = 791
-          Height = 202
+          Width = 1015
+          Height = 565
           Align = alClient
           Caption = 'Dados b'#225'sicos TX2'
           TabOrder = 0
           object mmTX2: TMemo
             Left = 2
             Top = 15
-            Width = 787
-            Height = 185
+            Width = 1011
+            Height = 548
             Align = alClient
+            ScrollBars = ssVertical
             TabOrder = 0
           end
         end
@@ -313,17 +365,18 @@ object frmSpedPrincipal: TfrmSpedPrincipal
         object GroupBox6: TGroupBox
           Left = 0
           Top = 0
-          Width = 791
-          Height = 202
+          Width = 1015
+          Height = 565
           Align = alClient
           Caption = 'Retorno do Envio'
           TabOrder = 0
           object mmRetornoEnvio: TMemo
             Left = 2
             Top = 15
-            Width = 787
-            Height = 185
+            Width = 1011
+            Height = 548
             Align = alClient
+            ScrollBars = ssVertical
             TabOrder = 0
           end
         end
@@ -333,7 +386,7 @@ object frmSpedPrincipal: TfrmSpedPrincipal
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 804
+    Width = 1023
     Height = 50
     Align = alTop
     BevelOuter = bvNone
@@ -345,20 +398,6 @@ object frmSpedPrincipal: TfrmSpedPrincipal
       Height = 13
       Caption = 'CNPJ Emissor/Empregador'
     end
-    object sbLimpar: TSpeedButton
-      Left = 286
-      Top = 21
-      Width = 126
-      Height = 21
-      Caption = 'Limpar Envio'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ParentFont = False
-      OnClick = sbLimparClick
-    end
     object edtCNPJEmissor: TEdit
       Left = 11
       Top = 23
@@ -368,17 +407,17 @@ object frmSpedPrincipal: TfrmSpedPrincipal
       Text = '00000000000000'
     end
     object GroupBox4: TGroupBox
-      Left = 438
+      Left = 456
       Top = 0
-      Width = 366
+      Width = 567
       Height = 50
       Align = alRight
       Caption = 'Protocolo'
       TabOrder = 1
       object edtProtocolo: TEdit
-        Left = 17
+        Left = 9
         Top = 19
-        Width = 336
+        Width = 544
         Height = 21
         TabOrder = 0
       end

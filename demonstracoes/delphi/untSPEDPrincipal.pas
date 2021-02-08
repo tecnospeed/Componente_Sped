@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, IniFiles, SpedClientX_TLB, StdCtrls, ExtCtrls, ComCtrls, DateUtils,
-  Buttons;
+  Buttons, FileCtrl;
 
 type
   TfrmSpedPrincipal = class(TForm)
@@ -18,7 +18,6 @@ type
     edtCNPJEmissor: TEdit;
     GroupBox4: TGroupBox;
     edtProtocolo: TEdit;
-    sbLimpar: TSpeedButton;
     edtDataIni: TDateTimePicker;
     Label8: TLabel;
     Label9: TLabel;
@@ -50,6 +49,11 @@ type
     sbEnviar: TSpeedButton;
     sbGerarApuracao: TSpeedButton;
     sbConsultarApuracao: TSpeedButton;
+    Label5: TLabel;
+    edtDirRetorno: TEdit;
+    btnDirConfig: TButton;
+    btnDirRetorno: TButton;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure sbPreencherCompClick(Sender: TObject);
@@ -59,6 +63,9 @@ type
     procedure sbGerarApuracaoClick(Sender: TObject);
     procedure sbConsultarApuracaoClick(Sender: TObject);
     procedure sbLimparClick(Sender: TObject);
+    procedure btnDirConfigClick(Sender: TObject);
+    procedure btnDirRetornoClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     procedure Limpar;
     { Private declarations }
@@ -92,16 +99,26 @@ begin
 end;
 
 procedure TfrmSpedPrincipal.FormCreate(Sender: TObject);
+var
+  dirRetorno : String;
 begin
   vSpedFiscal              := TspdSpedClientX.Create(nil);
 
   frmSpedPrincipal.Caption := 'Demonstração SpedFiscal - TecnoSpeed';
+
+  dirRetorno               := ExtractFileDir(ExtractFilePath(Application.ExeName)) + '\Retorno\';
+
+  if not DirectoryExists(dirRetorno) then
+    ForceDirectories(dirRetorno);
+  edtDirRetorno.text  := dirRetorno;
 end;
 
 procedure TfrmSpedPrincipal.FormShow(Sender: TObject);
 begin
-  edtDataIni.DateTime := StartOfTheMonth(Date);
-  edtDataFim.DateTime := EndOfTheMonth(Date);
+  edtDataIni.DateTime := StartOfTheMonth(Date - 30);
+  edtDataFim.DateTime := EndOfTheMonth(Date - 30);
+
+  edtNomeArquivo.Text := FormatDateTime('yyyy-mm',edtDataIni.DateTime) + '_SPED-FISCAL';
 end;
 
 procedure TfrmSpedPrincipal.sbPreencherCompClick(Sender: TObject);
@@ -112,10 +129,10 @@ begin
     vSpedFiscal.DataInicio            := DateToStr(edtDataIni.Date);
     vSpedFiscal.DataFim               := DateToStr(edtDataFim.Date);
     vSpedFiscal.CnpjEmissor           := edtCNPJEmissor.Text;
-    vSpedFiscal.DiretorioArquivo      := edtDirArquivo.Text;
+    vSpedFiscal.DiretorioArquivo      := edtDirRetorno.Text;
     vSpedFiscal.DiretorioConfiguracao := edtDirArquivo.Text;
 
-    ShowMessage('Configurado com sucesso.');
+    ShowMessage('Componente Configurado com sucesso.');
 
   except
     on e : exception do
@@ -137,7 +154,7 @@ begin
     mmApuracao.Lines.Add('   Protocolo: ' + vRetApuracao.Protocolo);
     mmApuracao.Lines.Add('   Mensagem: ' + vRetApuracao.Mensagem);
 
-    ShowMessage('Apurado com sucesso.');
+    ShowMessage('Criada uma nova Apuração com sucesso, e preenchido no campo protocolo.');
     pcProcessos.ActivePage := tsApuracao;
   except
     on e : exception do
@@ -183,8 +200,10 @@ begin
     mmRetornoEnvio.Lines.Add('   Protocolo: ' + vRetEnvioRegistro.Protocolo);
     mmRetornoEnvio.Lines.Add('   Mensagem: ' + vRetEnvioRegistro.Mensagem);
 
-    ShowMessage('Enviado com sucesso.');
+    ShowMessage('Registros adicionados a apuração.');
     pcProcessos.ActivePage := tsRetornoEnvio;
+
+    mmTX2.Clear;
   except
     on e : exception do
      showmessage('Ocorreu o seguinte erro: '+ e.message);
@@ -202,7 +221,7 @@ begin
     mmGerarApuracao.Lines.Add('   Protocolo: ' + vRetGerarApuracao.Protocolo);
     mmGerarApuracao.Lines.Add('   Mensagem: ' + vRetGerarApuracao.Mensagem);
 
-    ShowMessage('Apuração gerada com sucesso.');
+    ShowMessage('Iniciado o processamento da apuração, consulte a apuração para fazer o download do arquivo e dos erros.');
     pcProcessos.ActivePage := tsApuracao;
   except
     on e : exception do
@@ -233,6 +252,34 @@ begin
 end;
 
 procedure TfrmSpedPrincipal.sbLimparClick(Sender: TObject);
+begin
+  Limpar;
+  mmApuracao.Lines.Clear;
+  mmTX2.Lines.Clear;
+  mmRetornoEnvio.Lines.Clear;
+  mmGerarApuracao.Lines.Clear;
+  mmConsultaApuracao.Lines.Clear;
+end;
+
+procedure TfrmSpedPrincipal.btnDirConfigClick(Sender: TObject);
+var
+  selDir : string;
+begin
+  selDir := edtDirArquivo.Text;
+  if SelectDirectory(selDir, [], 0) then
+    edtDirArquivo.Text := selDir + '\';
+end;
+
+procedure TfrmSpedPrincipal.btnDirRetornoClick(Sender: TObject);
+var
+  selDir : string;
+begin
+  selDir := edtDirRetorno.Text;
+  if SelectDirectory(selDir, [], 0) then
+    edtDirRetorno.Text := selDir + '\';
+end;
+
+procedure TfrmSpedPrincipal.Button1Click(Sender: TObject);
 begin
   Limpar;
   mmApuracao.Lines.Clear;
