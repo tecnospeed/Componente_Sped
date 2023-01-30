@@ -1,4 +1,8 @@
-﻿## [3.1.8.6917]
+﻿## [3.1.8.6919]
+
+* Corre&ccedil;&otilde;es e melhorias diversos.
+
+## [3.1.8.6917]
 
 ## Novidades
 * DCEV-750 - Inclusão do registro 1601 indevidamente
@@ -14,6 +18,7 @@
 ## [3.1.8.6903]
 
 * Corre&ccedil;&otilde;es e melhorias diversos.
+
 
 
 
