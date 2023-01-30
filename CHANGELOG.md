@@ -1,6 +1,7 @@
 ﻿## [3.1.8.6919]
 
-* Corre&ccedil;&otilde;es e melhorias diversos.
+## Novidades
+* Compatibilizado com NT 2022.001 v1.1 - Guia 3.1.0/3.1.1/3.1.2
 
 ## [3.1.8.6917]
 
