@@ -1,4 +1,16 @@
-﻿## [3.1.8.6919]
+﻿## [3.1.9.1112]
+
+#Novidade
+
+- DSP4G-517 - disponibilizado propriedade [DiretorioLog]
+
+#Correções
+
+- DSML-548 - Api SPED : Access violation at address 0518E398 in module 'SpedX.ocx'
+
+- DSML-558 - Componente Sped: Refatorar raises tipados na TspdSpedEnum
+
+## [3.1.8.6919]
 
 ## Novidades
 * Compatibilizado com NT 2022.001 v1.1 - Guia 3.1.0/3.1.1/3.1.2
@@ -19,6 +31,7 @@
 ## [3.1.8.6903]
 
 * Corre&ccedil;&otilde;es e melhorias diversos.
+
 
 
 
