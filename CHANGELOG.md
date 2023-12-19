@@ -1,4 +1,12 @@
-﻿## [3.1.10.1115]
+﻿## [4.1.11.1124]
+
+**Novidades**
+
+- DSML-806 - disponibilizado [Nota Técnica 2023.001](https://blog.tecnospeed.com.br/efd-icms-ipi-nota-tecnica-2023-001-e-guia-pratico-do-leiaute-018/) do leiaute 018
+
+- DSML-1008 - melhoria nas mensagens de exceção ao manipular arquivos de retorno, facilitando assim a identificação do erro
+
+## [3.1.10.1115]
 
 **Correções**
 
@@ -38,6 +46,7 @@
 ## [3.1.8.6903]
 
 * Corre&ccedil;&otilde;es e melhorias diversos.
+
 
 
 
