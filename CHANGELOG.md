@@ -1,4 +1,13 @@
-﻿## [4.1.11.1124]
+﻿## [4.1.12.1126]
+
+**Novidades**
+
+- DSML-1018 - Compatibilizado instalador com o Delphi 12 Athenas
+
+- DSP4G-778 - integração por arquivo no formato JSON pelo novo metodo:
+[EnviarRegistrosJson](https://tecnospeed.zendesk.com/hc/pt-br/articles/21038250837655)
+
+## [4.1.11.1124]
 
 **Novidades**
 
@@ -46,6 +55,7 @@
 ## [3.1.8.6903]
 
 * Corre&ccedil;&otilde;es e melhorias diversos.
+
 
 
 
