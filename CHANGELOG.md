@@ -1,4 +1,8 @@
-﻿## [4.1.12.1126]
+﻿## [4.1.12.1129]
+
+* Corre&ccedil;&otilde;es e melhorias diversos.
+
+## [4.1.12.1126]
 
 **Novidades**
 
@@ -55,6 +59,7 @@
 ## [3.1.8.6903]
 
 * Corre&ccedil;&otilde;es e melhorias diversos.
+
 
 
 
